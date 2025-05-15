@@ -48,10 +48,10 @@ h1 {
 
 #soldier {
     position: absolute;
-    bottom: 20px;
-    left: 30px;
-    width: 75px;
-    height: 120px;
+    bottom: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
     background: url('Assets/player.png') no-repeat;
     background-size: contain;
     animation: soldierIdle 1s infinite alternate;
@@ -64,10 +64,10 @@ h1 {
 
 #tank {
     position: absolute;
-    bottom: 20px;
-    right: 30px;
-    width: 120px;
-    height: 75px;
+    bottom: 100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
     background: url('Assets/tank.png') no-repeat;
     background-size: contain;
     animation: tankMove 2s infinite alternate;
@@ -81,11 +81,11 @@ h1 {
 #bullet {
     position: absolute;
     width: 50px;
-    height: 25px;
+    height: 50px;
     background: url('Assets/bullet.png') no-repeat center;
     background-size: contain;
-    left: 100px; /* Đặt tại soldier */
-    bottom: 80px;
+    left: 50px; /* Đặt tại soldier */
+    bottom: 50px;
     display: none;
     transition: left 0.5s linear;
 }
@@ -93,10 +93,10 @@ h1 {
 #tank-bullet {
     position: absolute;
     width: 50px;
-    height: 25px;
+    height: 50px;
     background: url('Assets/bullet_Tank.png') no-repeat center; /* Sử dụng bullet_Tank.png */
     background-size: contain;
-    left: 450px; /* Đặt tại tank */
+    left: 50px; /* Đặt tại tank */
     bottom: 50px;
     display: none;
     transition: left 0.5s linear;
