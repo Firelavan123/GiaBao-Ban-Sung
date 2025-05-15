@@ -157,6 +157,9 @@ function shootBullet(hit) {
         setTimeout(() => {
             bullet.style.left = "450px";
             console.log("Đạn bắn tới tank, vị trí:", bullet.style.left);
+            if (bullet.style.left !== "450px") {
+                console.warn("Lỗi: Đạn không di chuyển tới tank!");
+            }
         }, 10);
 
         // Ẩn và reset về soldier
@@ -165,7 +168,7 @@ function shootBullet(hit) {
             tank.style.transform = "scale(0.8)";
             bullet.style.left = "100px"; // Reset về soldier
             console.log("Đạn ẩn và reset về soldier, vị trí:", bullet.style.left);
-        }, 600); // 600ms để đảm bảo transition hoàn tất
+        }, 800); // Tăng lên 800ms để đảm bảo transition hoàn tất
     } else {
         // Tank bắn soldier (khi sai)
         tankBullet.style.left = "450px"; // Đặt tại tank
@@ -177,6 +180,9 @@ function shootBullet(hit) {
         setTimeout(() => {
             tankBullet.style.left = "100px";
             console.log("Đạn bắn tới soldier, vị trí:", tankBullet.style.left);
+            if (tankBullet.style.left !== "100px") {
+                console.warn("Lỗi: Đạn không di chuyển tới soldier!");
+            }
         }, 10);
 
         // Ẩn và reset về tank
@@ -185,7 +191,7 @@ function shootBullet(hit) {
             soldier.style.transform = "scale(0.8)";
             tankBullet.style.left = "450px"; // Reset về tank
             console.log("Đạn ẩn và reset về tank, vị trí:", tankBullet.style.left);
-        }, 600); // 600ms để đảm bảo transition hoàn tất
+        }, 900); // Tăng lên 800ms để đảm bảo transition hoàn tất
     }
 }
 
